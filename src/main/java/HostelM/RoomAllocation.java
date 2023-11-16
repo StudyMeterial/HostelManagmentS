@@ -1,6 +1,7 @@
 package HostelM;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -22,7 +23,8 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/RoomAllocation")
 public class RoomAllocation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Object availableRoomsList;
+	private List<Integer> availableRoomsList;
+
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -38,6 +40,7 @@ public class RoomAllocation extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		/*HttpSession session=request.getSession();
 		  session.removeAttribute("username");
 		  session.invalidate();
@@ -65,7 +68,7 @@ public class RoomAllocation extends HttpServlet {
         // Write SQL query to retrieve available rooms
         // Execute the query and store the result in a List or other data structure
         // Set the list as an attribute in the request
-		String jdbcUrl = "jdbc:mysql://your_database_host:3306/roomallocation";
+		String jdbcUrl ="jdbc:mysql://localhost:3306/roomallocation";
         String username = "root";
         String password = "cf7oXIVIFhxQmb9";
 
@@ -77,7 +80,8 @@ public class RoomAllocation extends HttpServlet {
             while (resultSet.next()) {
                 int roomNumber = resultSet.getInt("room_id");
                 availableRoomsList.add(roomNumber);
-                System.out.println("Available Room Number: " + roomNumber);
+                PrintWriter out = response.getWriter();
+                //System.out.println("Available Room Number: " + roomNumber);
             }
         } catch (SQLException e) {
             e.printStackTrace();

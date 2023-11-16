@@ -31,20 +31,33 @@ public class AllocateRoomServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String studentId = request.getParameter("student_id");
-        int roomId = Integer.parseInt(request.getParameter("room_id"));
+        String roomId = request.getParameter("room_id");
 
         // Allocate the room
-        allocateRoom(studentId, roomId);
-        deallocateRoom(roomId);
+        if (roomId!= null && !roomId.isEmpty()) {
+            int roomId2 = Integer.parseInt(roomId);
+
+            // Allocate the room
+            allocateRoom(studentId, roomId2);
+            deallocateRoom(roomId2);
+
+            // Redirect to a confirmation page
+           // response.sendRedirect("confirmation.jsp");
+            response.sendRedirect("confirmation.jsp?action=allocate&student_id=" + studentId);
+
+        } else {
+            // Handle the case where roomIdParam is empty
+            response.getWriter().println("Error: Room ID parameter is empty");
+        }
         
 
         // Deallocate a room (if needed)
         // deallocateRoom(roomId);
 
         // Redirect to a confirmation page
-        System.out.print("hello world");
-        response.sendRedirect("confirmation.jsp"); // Replace "confirmation.jsp" with the actual confirmation page URL
-        System.out.print("hello world");
+        //System.out.print("hello world");
+        //response.sendRedirect("confirmation.jsp"); // Replace "confirmation.jsp" with the actual confirmation page URL
+        //System.out.print("hello world");
     }
 
     private void allocateRoom(String studentId, int roomId) {
