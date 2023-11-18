@@ -13,12 +13,7 @@ public class PersonServlet extends HttpServlet {
 		String personName = request.getParameter("personName");
 		String personAge = request.getParameter("personAge");
 		
-		 if (roomId == null || roomId.trim().isEmpty()) {
-	            // Handle the error as needed (redirect to an error page or display an error message)
-			 System.out.println("Error");
-	            response.sendRedirect("Error.jsp"); // Redirect to an error page
-	            return;
-	        }
+	
 
 		try {
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cutm",

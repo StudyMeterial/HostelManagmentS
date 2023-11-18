@@ -147,7 +147,7 @@ footer {
 
 				</li></span>
 				<li><a href="addPerson.jsp">Room Allocation</a></li>
-				<li><a href="#">Reports</a></li>
+				<li><a href="Reports">Reports</a></li>
 				<li><a href="#">Settings</a></li>
 				<li><a href="Logout">Logout</a></li>
 
