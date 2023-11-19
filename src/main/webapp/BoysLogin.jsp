@@ -37,7 +37,9 @@
 				<li class="nav-item active"><a class="nav-link" href="leaveRequest.jsp">Leave</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="StudentProfile">Profile</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Notifications</a>
+				<li class="nav-item"><a class="nav-link" href="MealNotification.jsp">Meal Notifications</a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="#">Feedback</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="Logout">Logout</a>
 				</li>
