@@ -56,7 +56,7 @@ th {
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 				<h2 class="mt-4 mb-4 text-center">Food Routine Menu</h2>
-				<form action="FoodRoutineServlet" method="post">
+				<form action="MessController" method="post">
 					<div class="form-group">
 						<label for="day">Day:</label> <input type="text"
 							class="form-control" id="day" name="day" required>
