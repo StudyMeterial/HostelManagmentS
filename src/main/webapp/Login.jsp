@@ -64,6 +64,8 @@
 										class="display-flex-center zmdi zmdi-twitter"></i></a></li>
 								<li><a href="#"><i
 										class="display-flex-center zmdi zmdi-google"></i></a></li>
+								<li><a href="#"><i
+										class="display-flex-center zmdi zmdi-Instagram"></i></a></li>
 							</ul>
 						</div>
 					</div>
