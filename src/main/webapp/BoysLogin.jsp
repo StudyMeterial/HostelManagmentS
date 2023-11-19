@@ -17,9 +17,9 @@
 .payment-form {
 	display: none;
 	background-color: #f2f2f2;
-	padding: 20px;
-	border-radius: 10px;
-	margin-top: 20px;
+	padding: 21px;
+	border-radius: 11px;
+	margin-top: 21px;
 }
 </style>
 </head>
@@ -34,7 +34,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Dashboard</a>
+				<li class="nav-item active"><a class="nav-link" href="leaveRequest.jsp">Leave</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="StudentProfile">Profile</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Notifications</a>
