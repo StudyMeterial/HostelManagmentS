@@ -34,26 +34,10 @@ public class MessController extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		// Initialize MessDao with sample meal plans
-        MessDao.initializeMealPlans(createSampleMealPlans());
-		
-		
-        // Retrieve meal plans from the database
-        List<MessPlan> mealPlans = MessController.getMealPlans();
-        request.setAttribute("mealPlans", mealPlans);
-
-        // Forward the request to the JSP page to display meal plans
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Meal_plans.jsp");
-        dispatcher.forward(request, response);
 
 	}
 
-	private static List<MessPlan> getMealPlans() {
-	    // Call the method from MessDao to retrieve the meal plans
-	    return MessDao.getMealPlans();
-	   
-
-	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -61,36 +45,27 @@ public class MessController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		
-		// Handle feedback submission
-        String studentId = request.getParameter("studentId");
-        String feedbackText = request.getParameter("feedbackText");
-        String specialRequest = request.getParameter("specialRequest");
+        
+    
+        String day = request.getParameter("day");
+        String breakfast = request.getParameter("breakfast");
+        String lunch = request.getParameter("lunch");
+        String dinner = request.getParameter("dinner");
 
-        FeedBack feedback = new FeedBack();
-        feedback.setStudentId(studentId);
-        feedback.setFeedbackText(feedbackText);
-        feedback.setSpecialRequest(specialRequest);
+        
+        
+        MessPlan messplan = new MessPlan();
+        messplan.setDay(day);
+        messplan.setBreakfast(breakfast);
+        messplan.setLunch(lunch);
+        messplan.setDinner(dinner);
+        
+        MessDao messDao = new MessDao();
+        messDao.addmessRequest(messplan);
 
-        MessController.submitFeedback(feedback);
+        response.sendRedirect("Meal_plans.jsp");
 
-        // Redirect back to the meal plans page
-        response.sendRedirect("MessControllerServlet");
+        
 	}
-
-	private static void submitFeedback(FeedBack feedback) {
-		// TODO Auto-generated method stub
-		 MessDao.submitFeedback(feedback);
-		
-	}
-	// Method to create sample meal plans
-    private List<MessPlan> createSampleMealPlans() {
-        List<MessPlan> sampleMealPlans = new ArrayList<>();
-        sampleMealPlans.add(new MessPlan("Monday", "Omelette", "Chicken Curry", "Pasta"));
-        sampleMealPlans.add(new MessPlan("Tuesday", "Pancakes", "Vegetarian Curry", "Pizza"));
-        // Add more meal plans as needed
-        System.out.println("Sample Meal Plans: " + sampleMealPlans);
-        return sampleMealPlans;
-    }
 
 }

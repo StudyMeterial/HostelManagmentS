@@ -58,7 +58,7 @@ public class GirlsLogin extends HttpServlet {
 			 ResultSet rs=ps.executeQuery();
 			 
 			 if(rs.next()) {
-				 RequestDispatcher rd=request.getRequestDispatcher("GirlsLogin.jsp");
+				 RequestDispatcher rd=request.getRequestDispatcher("MessLogin.jsp");
 				 rd.forward(request, response);
 			 }else {
 				 RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");

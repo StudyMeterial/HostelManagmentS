@@ -10,9 +10,6 @@ public class MessPlan {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MessPlan(String string, String string2, String string3, String string4) {
-		// TODO Auto-generated constructor stub
-	}
 	public String getDay() {
 		return day;
 	}
@@ -37,5 +34,5 @@ public class MessPlan {
 	public void setDinner(String dinner) {
 		this.dinner = dinner;
 	}
-    
+	
 }

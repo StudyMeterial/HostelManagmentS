@@ -17,9 +17,9 @@
 .payment-form {
 	display: none;
 	background-color: #f2f2f2;
-	padding: 20px;
-	border-radius: 10px;
-	margin-top: 20px;
+	padding: 21px;
+	border-radius: 11px;
+	margin-top: 21px;
 }
 </style>
 </head>
