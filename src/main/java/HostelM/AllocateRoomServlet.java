@@ -36,7 +36,7 @@ public class AllocateRoomServlet extends HttpServlet {
         // Allocate the room
         if (roomId!= null && !roomId.isEmpty()) {
             int roomId2 = Integer.parseInt(roomId);
-
+            try {
             // Allocate the room
             allocateRoom(studentId, roomId2);
             deallocateRoom(roomId2);
@@ -45,7 +45,10 @@ public class AllocateRoomServlet extends HttpServlet {
            // response.sendRedirect("confirmation.jsp");
             response.sendRedirect("confirmation.jsp?action=allocate&student_id=" + studentId);
 
-        } else {
+        }catch(NumberFormatException e) {
+        	response.getWriter().println("Error: Room ID parameter is empty");
+        }
+        }   else {
             // Handle the case where roomIdParam is empty
             response.getWriter().println("Error: Room ID parameter is empty");
         }

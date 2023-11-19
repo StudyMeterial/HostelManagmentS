@@ -132,8 +132,8 @@ footer {
 					type="text" id="dropdownMenuButton" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false">Hostels </span>
 					<li class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Boys</a> <a
-						class="dropdown-item" href="#">Girls</a>
+						<a class="dropdown-item" href="RoomInfo">Room Information</a> <a
+						class="dropdown-item" href="StudentInfo">Student Information</a>
 
 
 				</li></span>
@@ -141,13 +141,13 @@ footer {
 					type="text" id="dropdownMenuButton" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false">Students </span>
 					<li class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Add Student</a> <a
-						class="dropdown-item" href="#">Student Lists</a>
+						<a class="dropdown-item" href="index.jsp">Add Rooms</a> <a
+						class="dropdown-item" href="ListOfStudent">Student Lists</a>
 
 
 				</li></span>
-				<li><a href="RoomAllocation">Room Allocation</a></li>
-				<li><a href="#">Reports</a></li>
+				<li><a href="addPerson.jsp">Room Allocation</a></li>
+				<li><a href="Reports">Reports</a></li>
 				<li><a href="#">Settings</a></li>
 				<li><a href="Logout">Logout</a></li>
 
