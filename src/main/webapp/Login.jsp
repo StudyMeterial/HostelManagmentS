@@ -23,7 +23,7 @@
 				<div class="signin-content">
 					<div class="signin-image">
 						<figure>
-							<img src="images/signin-image.jpg" alt="sing up image">
+							<img src="images/signin-image.jpg" alt="singup image">
 						</figure>
 						<a href="signup.jsp" class="signup-image-link">Create an
 							account</a>
@@ -64,6 +64,8 @@
 										class="display-flex-center zmdi zmdi-twitter"></i></a></li>
 								<li><a href="#"><i
 										class="display-flex-center zmdi zmdi-google"></i></a></li>
+								<li><a href="#"><i
+										class="display-flex-center zmdi zmdi-Instagram"></i></a></li>
 							</ul>
 						</div>
 					</div>
