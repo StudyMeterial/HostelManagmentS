@@ -64,7 +64,7 @@ main {
 	<ul class="navbar">
 		<li><a href="#">Home</a></li>
 		<li><a href="Meal_plans.jsp">Add Food Item</a></li>
-		<li><a href="#">FeedBack From Student</a></li>
+		<li><a href="MessController.jsp">FeedBack From Student</a></li>
 		<li><a href="Logout">Logout</a></li>
 	</ul>
 
