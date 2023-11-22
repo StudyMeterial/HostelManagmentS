@@ -44,7 +44,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Student List</h2>
+        <h2>Room List</h2>
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
